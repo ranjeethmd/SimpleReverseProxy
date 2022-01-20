@@ -9,10 +9,10 @@ namespace ReverseProxy.Lib;
 /// Subdomain based UriBuilder
 /// </summary>
 
-public class UriBuilderService : IUriBuilder
+public class SubDomainUriBuilderService : IUriBuilder
 {
     private readonly IHostMapsRepository _repository;
-    public UriBuilderService(IHostMapsRepository repository)
+    public SubDomainUriBuilderService(IHostMapsRepository repository)
     {
         _repository = repository;
     }

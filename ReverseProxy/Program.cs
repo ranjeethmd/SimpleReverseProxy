@@ -6,9 +6,12 @@ using ReverseProxy.Lib;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<IUriBuilder, UriBuilderService>();
+builder.Services.AddTransient<IUriBuilder, SubDomainUriBuilderService>();
 builder.Services.AddTransient<IRemoteHost, RemoteHostService>();
 builder.Services.AddTransient<IHostMapsRepository, FileRepositoryService>();
+builder.Services.AddTransient<IClientBuilder, CookieClientService>();
+
+
 
 
 var app = builder.Build();
